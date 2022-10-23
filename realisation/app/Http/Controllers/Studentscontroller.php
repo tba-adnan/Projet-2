@@ -33,16 +33,18 @@ class Studentscontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function save(Request $request){
-     
-
-
-
-
+    public function save(Request $request)
+    {
+    $id =  $request->id;
+    $request->validate(['email'=>['email']]);
+// 
+    $Student=new Student();
+    $Student->name = $request->name;
+    $Student->nickname = $request->nickname;
+    $Student->email = $request->email;
+    $Student->id = $id;
+    $Student->save();
     }
-
-
-
 
 
     public function store(Request $request)
