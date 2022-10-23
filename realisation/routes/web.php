@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\Studentscontroller; 
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// General : 
+Route::redirect('/', '/index');
 
+// Promotions : 
 Route::get('index',[PromotionController::class,'index']);
 Route::get('create',[PromotionController::class,'create']);
 Route::post('add',[PromotionController::class,'save']);
@@ -23,3 +27,7 @@ Route::get('delete/{id}',[PromotionController::class,'delete']);
 Route::post('update/{id}',[PromotionController::class,'update']);
 Route::get('search',[PromotionController::class,'search']);
 
+// Students : 
+Route::get('students',[Studentscontroller::class,'index']);
+Route::get('add-student',[Studentscontroller::class,'create']);
+Route::post('save-student',[Studentscontroller::class,'save']);

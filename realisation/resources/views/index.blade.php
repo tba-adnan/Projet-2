@@ -1,7 +1,9 @@
 Search :<input type="text" id="search">
 <br>
 
-<a href="/create"><button>Ajouter</button></a>
+<br>
+<a href="/create"><button>Ajouter une Promotion</button></a>
+<a href="/add-student"><button>Ajouter un Stagaire</button></a>
 <table>
     <thead>
         <tr>
@@ -16,14 +18,21 @@ Search :<input type="text" id="search">
             <th>{{$value->id}}</th>
             <td>{{$value->name}}</td>
             <td>
-                <a href="ddit/{{$value->id}}"><button>Modifier</button></a>
-                <a href="Delete/{{$value->id}}"><button>Supprimer</button></a>
+                <a href="edit/{{$value->id}}"><button>Modifier</button></a>
+                <a href="delete/{{$value->id}}"><button>Supprimer</button></a>
             </td>
         </tr>
         @endforeach
-
     </tbody>
 </table>
+
+<!--  -->
+<br>
+
+
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/search.js"></script>
