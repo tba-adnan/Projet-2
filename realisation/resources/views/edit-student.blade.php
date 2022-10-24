@@ -1,6 +1,6 @@
 @foreach ($Student as $value)
     
-<form action="{{url('update-student')}}/{{$value->id}}" method="post">
+<form action="{{url('edit-student')}}/{{$value->id}}" method="post">
     @csrf
     Nom : <input type="text" value="{{$value->name}}" name="name">
     Nickname : <input type="text" value="{{$value->nickname}}" name="nickname">
