@@ -44,23 +44,7 @@ class Studentscontroller extends Controller
     $Student->email = $request->email;
     $Student->id = $id;
     $Student->save();
-    }
-
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    return redirect("/students");
     }
 
     /**
@@ -71,7 +55,15 @@ class Studentscontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $Student = Student::where('id',$id)->get();
+          return view('edit-student',compact('Student'));
+    }
+
+    public function update(Request $request,$id){
+        $Student = Student::where('id',$id)->update(["name"=>$request->name]);
+        $Student = Student::where('id',$id)->update(["nickname"=>$request->nickname]);
+        $Student = Student::where('id',$id)->update(["email"=>$request->email]);
+        return redirect('students');
     }
 
     /**
@@ -81,10 +73,7 @@ class Studentscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.
@@ -92,8 +81,55 @@ class Studentscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Student::where('id',$id)->Delete();
+        return redirect('students');
+    }
+
+
+
+
+
+    public function search(Request $request)
+    {
+    if($request->ajax()){
+        $input = $request->key;
+    $output="";
+    $searchStudents=Student::where('name','like','%'.$input."%")->get();
+    if($searchPromotion)
+    {
+    foreach ($searchPromotion as $promotion) {
+    $output.='<tr>
+    <td>'.$Student->id.'</td>
+    <td>'.$Student->name.'</td>';
+    }
+    return Response($output);
+       }
+       }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
