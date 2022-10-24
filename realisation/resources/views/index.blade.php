@@ -1,9 +1,13 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+
 Search :<input type="text" id="search">
 <br>
 
 <br>
-<a href="/create"><button>Ajouter une Promotion</button></a>
-<a href="/add-student"><button>Ajouter un Stagaire</button></a>
+<a href="/create"><button class="btn btn-success" >Ajouter une Promotion</button></a>
+<a href="/add-student"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
 <table>
     <thead>
         <tr>
@@ -18,8 +22,8 @@ Search :<input type="text" id="search">
             <th>{{$value->id}}</th>
             <td>{{$value->name}}</td>
             <td>
-                <a href="edit/{{$value->id}}"><button>Modifier</button></a>
-                <a href="delete/{{$value->id}}"><button>Supprimer</button></a>
+                <a href="edit/{{$value->id}}"><button class="btn btn-warning">Modifier</button></a>
+                <a href="delete/{{$value->id}}"><button class="btn btn-danger">Supprimer</button></a>
             </td>
         </tr>
         @endforeach
