@@ -2,13 +2,15 @@
 
 
 
-Search :<input type="text" id="search">
+Search :<input type="text" class="form-control" id="search">
 <br>
 
+
+<div class="container-fluid">
 <br>
 <a href="/create"><button class="btn btn-success" >Ajouter une Promotion</button></a>
 <a href="/add-student"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>id : </th>
@@ -29,11 +31,8 @@ Search :<input type="text" id="search">
         @endforeach
     </tbody>
 </table>
-
+</div>
 <!--  -->
 <br>
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/search.js"></script>
