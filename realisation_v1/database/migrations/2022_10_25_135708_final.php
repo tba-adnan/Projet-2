@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('student_join', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table) {
             $table->increments("id");
             $table->string('name')->nullable();
             $table->string('nickname')->nullable();
             $table->string('email')->nullable();
-            $table->unsignedInteger('promotion_id')->nullable();
-            $table->foreign('promotion_id')
-            ->references('id_promo')
+            $table->unsignedInteger('id_promo')->nullable();
+            $table->foreign('id_promo')
+            ->references('id')
             ->on('promotions')
             ->onDelete('cascade');
             $table->timestamps();
