@@ -18,7 +18,7 @@ Search :<input type="text" class="form-control" id="search">
 <div class="container">
 <br>
 <a href="/create"><button class="btn btn-success" >Ajouter une Promotion</button></a>
-<a href="/add-student"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
+
 <br>
 <table class="table table-striped lead">
     <thead>
@@ -36,6 +36,7 @@ Search :<input type="text" class="form-control" id="search">
             <td>
                 <a href="edit/{{$value->id}}"><button class="btn btn-warning">Modifier</button></a>
                 <a href="delete/{{$value->id}}"><button class="btn btn-danger">Supprimer</button></a>
+                <a href="/add-student/{{$value->id}}"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
             </td>
         </tr>
         @endforeach

@@ -10,13 +10,14 @@
 <body>
 <br>
 <div class="mb-2 w-25 container-fluid lead form-control shadow p-3 mb-5 bg-white rounded lead">
-<form action="save-student" method="POST">
+<form action="{{url('save-student')}}" method="POST">
 @csrf
 Nom :<input name="name" class="form-control lead" type="text">
 <br>
 Prénom :<input name="nickname" class="form-control lead" type="text">
 <br>
 Email :<input name="email" class="form-control lead" type="text">
+<input name="id" value='{{$id}}' type="hidden" class="form-control lead" type="text">
 <br>
 <button class="btn btn-success">Ajouter</button>
 </form>

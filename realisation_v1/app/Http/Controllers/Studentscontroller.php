@@ -22,9 +22,9 @@ class Studentscontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view ('student/add'); 
+        return view ('student/add',compact('id')); 
     }
 
     /**
@@ -42,7 +42,7 @@ class Studentscontroller extends Controller
     $Student->name = $request->name;
     $Student->nickname = $request->nickname;
     $Student->email = $request->email;
-    $Student->id = $id;
+    $Student->id_promo = $id;
     $Student->save();
     return redirect("/students");
     }
