@@ -12,9 +12,10 @@
 <div class="mb-2 w-25 container-fluid lead form-control shadow p-3 mb-5 bg-white rounded ">
 
 @foreach ($promotion as $value)
-<form action="{{url('update')}}/{{$value->id}}" method="post">
+<form action="{{url('update')}}/{{$value->id}}" method="post" class="lead">
     @csrf
     Modifier le Nom : <input type="text" class="form-control" value="{{$value->Name_promotion}}" name="name">   
+    <br>
     <button class="btn btn-success">Update</button>
 </form>
 @endforeach
