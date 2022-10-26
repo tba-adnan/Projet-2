@@ -18,7 +18,7 @@ Search :<input type="text" class="form-control" id="search">
 <div class="container">
 <br>
 <a href="/create"><button class="btn btn-success" >Ajouter une Promotion</button></a>
-<a href="/add-student"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
+
 <br>
 <table class="table table-striped lead">
     <thead>
@@ -31,11 +31,12 @@ Search :<input type="text" class="form-control" id="search">
         @foreach ($promotion as $value)
             
         <tr>
-            <th>{{$value->id}}</th>
-            <td>{{$value->name}}</td>
+            <th>{{$value->id}} </th>
+            <td><p href="#" onclick="var input = document.createElement('input'); input.setAttribute('value', this.firstChild.nodeValue); this.parentNode.replaceChild(input, this);">{{$value->name}} </p></td>
             <td>
                 <a href="edit/{{$value->id}}"><button class="btn btn-warning">Modifier</button></a>
                 <a href="delete/{{$value->id}}"><button class="btn btn-danger">Supprimer</button></a>
+                <a href="/add-student/{{$value->id}}"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
             </td>
         </tr>
         @endforeach

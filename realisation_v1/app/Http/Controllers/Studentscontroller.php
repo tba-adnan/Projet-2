@@ -22,9 +22,9 @@ class Studentscontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view ('student/add'); 
+        return view ('student/add',compact('id')); 
     }
 
     /**
@@ -42,7 +42,7 @@ class Studentscontroller extends Controller
     $Student->name = $request->name;
     $Student->nickname = $request->nickname;
     $Student->email = $request->email;
-    $Student->id = $id;
+    $Student->id_promo = $id;
     $Student->save();
     return redirect("/students");
     }
@@ -84,12 +84,8 @@ class Studentscontroller extends Controller
     public function delete($id)
     {
         Student::where('id',$id)->Delete();
-        return redirect('students');
+        return redirect('/');
     }
-
-
-
-
 
     public function search(Request $request)
     {
