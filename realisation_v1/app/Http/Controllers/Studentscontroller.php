@@ -84,12 +84,8 @@ class Studentscontroller extends Controller
     public function delete($id)
     {
         Student::where('id',$id)->Delete();
-        return redirect('students');
+        return redirect('/');
     }
-
-
-
-
 
     public function search(Request $request)
     {
