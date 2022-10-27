@@ -32,11 +32,11 @@ Search :<input type="text" class="form-control" id="search">
             
         <tr>
             <th>{{$value->id}} </th>
-            <td><p href="#" onclick="var input = document.createElement('input'); input.setAttribute('value', this.firstChild.nodeValue); this.parentNode.replaceChild(input, this);">{{$value->name}} </p></td>
+            <td><p href="{{url('update')}}/{{$value->id}}" onclick="var input = document.createElement('input'); input.setAttribute('value', this.firstChild.nodeValue); this.parentNode.replaceChild(input, this);">{{$value->name}}</p></td>
             <td>
-                <a href="edit/{{$value->id}}"><button class="btn btn-warning">Modifier</button></a>
-                <a href="delete/{{$value->id}}"><button class="btn btn-danger">Supprimer</button></a>
-                <a href="/add-student/{{$value->id}}"><button class="btn btn-success" >Ajouter un Stagaire</button></a>
+                <a href="edit/{{$value->id}}"><button class="btn btn-warning lead">Modifier</button></a>
+                <a href="delete/{{$value->id}}"><button class="btn btn-danger lead ">Supprimer</button></a>
+                <a href="/add-student/{{$value->id}}"><button class="btn btn-success lead" >Ajouter un Stagaire</button></a>
             </td>
         </tr>
         @endforeach
