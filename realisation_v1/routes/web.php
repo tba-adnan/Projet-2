@@ -26,6 +26,10 @@ Route::get('edit/{id}',[PromotionController::class,'edit']);
 Route::get('delete/{id}',[PromotionController::class,'delete']);
 Route::post('update/{id}',[PromotionController::class,'update']);
 Route::get('search',[PromotionController::class,'search']);
+// 
+// Route::get('students',[PromotionController::class,'index']);
+
+
 
 // Students : 
 Route::get('students',[Studentscontroller::class,'index']);

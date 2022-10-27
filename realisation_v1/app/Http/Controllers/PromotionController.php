@@ -44,7 +44,7 @@ public function search(Request $request)
 if($request->ajax()){
     $input = $request->key;
 $output="";
-$searchPromotion=Promotion::where('name','like','%'.$input."%")->get();
+$searchPromotion=Promotion::where('name', 'id_promo','like','%'.$input."%")->get();
 if($searchPromotion)
 {
 foreach ($searchPromotion as $promotion) {

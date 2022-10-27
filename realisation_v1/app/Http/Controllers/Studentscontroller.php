@@ -17,6 +17,16 @@ class Studentscontroller extends Controller
          return view('students', ['name' => $students]); 
     }
 
+
+    public function display(){
+        // $students = DB::table('')->get();
+        //  return view('students', ['name' => $students]); 
+    }
+
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *
