@@ -18,6 +18,11 @@ Search :<input type="text" class="form-control" id="search">
 <div class="container">
 <br>
 <a href="/create"><button class="btn btn-success" >Ajouter une Promotion</button></a>
+<a href="/students"><button class="btn btn-secondary" >Etudiants actuels</button></a>
+
+
+
+
 
 <br>
 <table class="table table-striped lead">

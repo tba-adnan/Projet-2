@@ -91,10 +91,9 @@ class Studentscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
-    {
+    public function delete($id){
         Student::where('id',$id)->Delete();
-        return redirect('/');
+        return redirect('students');
     }
 
     public function search(Request $request)

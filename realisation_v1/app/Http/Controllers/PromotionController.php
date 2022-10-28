@@ -35,7 +35,7 @@ public function update(Request $request,$id){
 
 public function delete($id){
     Promotion::where('id',$id)->Delete();
-    return redirect('/');
+     return redirect('/');
 }
 
 

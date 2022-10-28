@@ -14,17 +14,6 @@
 Search :<input type="text" class="form-control" id="search">
 <br>
 
-{{-- <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Promotions
-
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    @foreach ($name as $value)
-      <li><a class="dropdown-item" href="#">{{$value->id}}</a></li>
-      @endforeach
-    </ul>
-  </div> --}}
 </div>
 <br>
 

@@ -10,7 +10,6 @@
 <body>
 <br>
 <div class="mb-2 w-25 container-fluid lead form-control shadow p-3 mb-5 bg-white rounded ">
-
 @foreach ($promotion as $value)
 <form action="{{url('update')}}/{{$value->id}}" method="post" class="lead">
     @csrf
