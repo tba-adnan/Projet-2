@@ -50,7 +50,9 @@ if($searchPromotion)
 foreach ($searchPromotion as $promotion) {
 $output.='<tr>
 <td>'.$promotion->id.'</td>
-<td>'.$promotion->name.'</td>';
+<td>'.$promotion->name.'</td>
+<td>'.$promotion->created_at.'</td>
+';
 }
 return Response($output);
    }

@@ -104,7 +104,7 @@ class Studentscontroller extends Controller
     $searchStudents=Student::where('name','like','%'.$input."%")->get();
     if($searchPromotion)
     {
-    foreach ($searchPromotion as $promotion) {
+    foreach ($searchStudents as $Student) {
     $output.='<tr>
     <td>'.$Student->id.'</td>
     <td>'.$Student->name.'</td>';

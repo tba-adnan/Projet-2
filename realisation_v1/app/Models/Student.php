@@ -9,6 +9,6 @@ class Student extends Model
 {
     use HasFactory;
     protected $tab='students';
-    // protected $col = ['name', 'nickname', 'email'];
+    protected $col = ['name', 'nickname', 'email'];
   
 }
